@@ -7,8 +7,9 @@ class Desktop(Computador):
         self._potenciaDaFonte = potenciaDaFonte
 
     #  Esta classe reimplementa o método getInformacoes() herdado de computador.
-    def getInformacoes(self):
-        return f"Modelo: {self.modelo}, Cor: {self.cor}, Preço: R${self.preco}, Potência da Fonte: {self._potenciaDaFonte}"
+    def getInformacoesDesktop(self):
+        super().getInformacoes()
+        return f"Potência da Fonte: {self._potenciaDaFonte}"
 
     # Implementação do método cadastrar para Desktop
     def cadastrar(self):

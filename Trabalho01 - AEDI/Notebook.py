@@ -7,8 +7,9 @@ class Notebook(Computador):
         self.__tempoDeBateria = tempoDeBateria
 
     # Esta classe reimplementa o método getInformacoes() herdado de computador.
-    def getInformacoes(self):
-        return f"Modelo: {self.modelo}, Cor: {self.cor}, Preço: R${self.preco}, Tempo de Bateria: {self.__tempoDeBateria} horas"
+    def getInformacoesNotebook(self):
+        super().getInformacoes()
+        return f"Tempo de Bateria: {self.__tempoDeBateria} horas"
 
     def cadastrar(self):
         print("Cadastrando notebook...")
